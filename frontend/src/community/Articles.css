@@ -1,0 +1,74 @@
+.article {
+  width: calc(100% - 100px); /* Prendre toute la largeur de la page moins un espace à droite */
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+  grid-gap: 20px;
+  padding-right: 100px; /* Ajouter du padding à droite */
+}
+
+.article-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Faire en sorte que la largeur soit responsive */
+  height: 400px; /* Vous pouvez ajuster cette hauteur si nécessaire */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.article-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.article-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.article-card p {
+  color: #666;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.b-t-n {
+  padding-top: 10px;
+}
+
+.spann {
+  padding: 10px;
+}
+
+.pagination {
+  padding-top: 15px;
+}
+
+.chrch {
+  background-color: #eee;
+  border: none;
+  padding: 10px 15px;
+  margin: 8px 0;
+  width: 150px;
+  border-radius: 8px;
+}
+
+.chrch1 {
+  margin-left: 10px;
+}
