@@ -56,7 +56,7 @@ sign in :
 ![image_4_400x320](https://github.com/rachidoutaleb/CyberLearn/assets/123762098/e618b291-44ba-4b20-bf0c-6ba52bc4964a)
 
 
-# Admin
+# Admin :
 
 courses management :
 
