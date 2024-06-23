@@ -1,6 +1,43 @@
 # CyberLearn
 plateforme de e-learning de Cybersécurité
 
+## Features
+
+#### Account Actions
+- Sign Up
+- Sign In
+
+#### Admin
+- **Courses Management**
+  - Import New Course
+  - Edit Course
+  - Delete Course
+- **Manage Users**
+  - New User
+  - Edit User
+  - Delete User
+- **Manage Library**
+  - New Book
+  - Edit Book
+  - Delete Book
+    
+
+#### User
+- Dashboard
+- Edit Profile
+- Our Program
+- Our Modules
+- Courses of a Module
+- Course
+- Todo List
+- User Library
+- Community
+  - Create Post
+  - Comment on Post
+  - Delete Post
+- Notifications Page
+
+  
 ## A look at our platform :
 main page :
 
