@@ -1,0 +1,76 @@
+Requêtes pour manipuler le backend et les requêtes appropriées dans Postman
+
+1. Créer un utilisateur
+Method: POST
+URL: http://localhost:8080/users
+Body:
+
+{
+  "email": "user@example.com",
+  "userName": "username",
+  "password": "password"
+}
+
+
+
+2. Créer un article
+Method: POST
+URL: http://localhost:8080/articles?userId=1
+Body:
+{
+  "title": "Article Title",
+  "slug": "article-title",
+  "body": "This is the body of the article."
+}
+
+
+3. Obtenir tous les articles (page par défaut de 10)
+Method: GET
+URL: http://localhost:8080/articles
+
+4. Filtrer les articles par tag
+Method: GET
+URL: http://localhost:8080/articles?tag=stocks
+
+5. Filtrer les articles par auteur
+Method: GET
+URL: http://localhost:8080/articles?author=arnavg
+
+6. Pagination des articles
+Method: GET
+URL: http://localhost:8080/articles?page=3&size=10
+
+7. Obtenir un article par son slug
+Method: GET
+URL: http://localhost:8080/articles/article-title
+
+8. Modifier un article par son slug
+Method: PATCH
+URL: http://localhost:8080/articles/article-title
+Body:
+{
+  "title": "Updated Article Title",
+  "body": "This is the updated body of the article."
+}
+
+9. Obtenir tous les commentaires d'un article
+Method: GET
+URL: http://localhost:8080/articles/article-title/comments
+
+10. Ajouter un commentaire à un article
+Method: POST
+URL: http://localhost:8080/articles/article-title/comments?userId=1
+Body:
+{
+  "title": "Comment Title",
+  "body": "This is the body of the comment."
+}
+
+11. Supprimer un commentaire d'un article
+Method: DELETE
+URL: http://localhost:8080/articles/article-title/comments/1
+
+12.afficher le contenue d'un article
+
+Method: GET
+http://localhost:8080/articles/treqt/content

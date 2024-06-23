@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .btn-primary {
+      background-color: #34BDF9;
+      border-color: #34BDF9;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background-color: #28a2d4;
+      border-color: #28a2d4;
+    }
+    h1 {
+      color: #34BDF9;
+    }
+    .table thead th {
+      border: 2px solid #34BDF9;
+      color: black;
+      background-color: white;
+    }
+    .table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .table tbody tr:nth-child(odd) {
+      background-color: white;
+    }
+    .table td, .table th {
+      border: none;
+    }
+    .table {
+      width: 100%;
+    }
+    .btn-sm {
+      margin-right: 5px;
+    }
+    .btn-danger {
+      background-color: #ff4d4d;
+      border-color: #ff4d4d;
+    }
+    .btn-danger:hover {
+      background-color: #cc0000;
+      border-color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center my-4">Books Cyber Security</h1>
+
+  <a class="btn btn-primary mb-3" href="/products/create">Import Books</a>
+
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Edition Date</th>
+      <th>Description</th>
+      <th>Cover</th>
+      <th>Category</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+      <td th:text="${product.titre}"></td>
+      <td th:text="${product.auteur}"></td>
+      <td th:text="${product.dateEdition.toString().substring(0, 10)}"></td>
+      <td th:text="${product.description}"></td>
+      <td>
+        <img th:src="@{/images/{cover}(cover=${product.cover})}" alt="Cover" width="100">
+      </td>
+      <td th:text="${product.categorie}"></td>
+      <td style="white-space:nowrap">
+        <a class="btn btn-primary btn-sm" th:href="@{/products/edit/{id}(id=${product.id})}">Edit</a>
+        <a class="btn btn-danger btn-sm" th:href="@{/products/delete/{id}(id=${product.id})}" onclick="return confirm('Are you sure?')">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
